@@ -3,7 +3,7 @@
 #include <deque>
 #include <map>
 #include <string>
-#include "Tarea.h"
+class Tarea;
 using namespace std;
 class Agente
 {

@@ -2,4 +2,4 @@
 
 Tarea::Tarea(){}
 Tarea::~Tarea(){}
-vector<string> Tarea::getvectorEtiqueta(){return this->etiquetas;}
+vector<string>& Tarea::getvectorEtiqueta(){return this->etiquetas;}
