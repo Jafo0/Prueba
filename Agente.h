@@ -11,13 +11,14 @@ private:
     string etiqueta{};
     Tarea* tarea{nullptr};
 public:
-    Agente(Tarea*);
+    Agente()=default;
     ~Agente()=default;
     void setEtiqueta(string et);
     string getEtiqueta();
+    Tarea* getTarea(){return this->tarea;}
 
-    virtual void agregarse(vector<string>)=0;//etiqueta
-    virtual Tarea* accion() =0; //accion 
+    
+    virtual Tarea* accion(Tarea*) =0; //accion 
 };
 
 

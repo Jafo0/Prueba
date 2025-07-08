@@ -11,5 +11,6 @@ public:
     Tarea();
     ~Tarea();
     //virtual void registrarAgente(Agente*)=0;
-    vector<string> getEtiqueta();
+    virtual void agregarse(string&)=0;
+    vector<string> getvectorEtiqueta();
 };

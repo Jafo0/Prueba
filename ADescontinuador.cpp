@@ -1,6 +1,6 @@
-#include "AProveedor.h"
+#include "ADescontinuador.h"
 
-Tarea* AProveedor::accion(Tarea* tarea){
+Tarea* ADescontinuador::accion(Tarea* tarea){
     Inventario* inv = dynamic_cast<Inventario*>(tarea);
     if (!inv){
         return nullptr;
@@ -13,10 +13,10 @@ Tarea* AProveedor::accion(Tarea* tarea){
     advance(it, cont);
 
     int id = it->first; //primer valor es el id segundo el valor
-    int cantidadRan = rand()%5+1;
+    //borro objeto
+    mapa.erase(it);
 
-    mapa[id]+=cantidadRan;
-    string etiquetaGenerada = "Entran "+to_string(cantidadRan)+" unidades de juguete" + to_string(id);
+    string etiquetaGenerada = "Borro juguete en <"+ to_string(id)+">";
     this->setEtiqueta(etiquetaGenerada);
     inv->agregarse(etiquetaGenerada);
     return inv;

@@ -1,5 +1,5 @@
 #include "Agente.h"
-Agente::Agente(Tarea* tar):tarea(tar){}
+Agente::Agente(){}
 
     
 void Agente::setEtiqueta(string et ){ this->etiqueta = et;}

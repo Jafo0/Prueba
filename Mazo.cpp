@@ -10,4 +10,8 @@ Mazo::Mazo(){
     }
 }
 Mazo::~Mazo(){}
-multimap<string,string> Mazo::getMap(){return this->cartas;}
+multimap<string,string>& Mazo::getMap() {return this->cartas;}
+
+void Mazo::agregarse(string& etiqueta) {
+    this->getvectorEtiqueta().push_back(etiqueta);
+}

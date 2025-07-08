@@ -10,6 +10,7 @@ private:
 public:
     Inventario();
     ~Inventario();
-    map<int,int> getMap();
+    map<int,int>& getMap();
+    void agregarse(string& etiqueta) override;
 };
 

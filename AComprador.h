@@ -2,12 +2,13 @@
 #include "Agente.h"
 #include "Tarea.h"
 #include "Inventario.h"
-class AProveedor : public Agente{
+class AComprador : public Agente{
 private:
     
 public:
-    AProveedor()=default; 
-    ~AProveedor()=default;
+    AComprador()=default; 
+    ~AComprador()=default;
 
     Tarea* accion(Tarea*) override;//accion 
+
 };

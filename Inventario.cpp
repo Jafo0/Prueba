@@ -6,4 +6,8 @@ Inventario::Inventario(){
     }
 }
 Inventario::~Inventario(){}
-map<int,int> Inventario::getMap(){return this->juguetes;}
+map<int,int>& Inventario::getMap(){return this->juguetes;}
+
+void Inventario::agregarse(string& etiqueta) {
+    this->getvectorEtiqueta().push_back(etiqueta);
+}

@@ -10,6 +10,7 @@ private:
 public:
     Mazo(/* args */);
     ~Mazo();
-    multimap<string,string> getMap();
+    multimap<string,string>& getMap();
+    void agregarse(string& etiqueta) override;
 };
 
